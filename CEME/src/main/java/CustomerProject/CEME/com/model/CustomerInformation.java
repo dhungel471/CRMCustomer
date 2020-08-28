@@ -1,5 +1,6 @@
 package CustomerProject.CEME.com.model;
 
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 
 public class CustomerInformation {
@@ -21,12 +22,13 @@ public class CustomerInformation {
     }
 
     public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
+        return id;
     }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+    
     
     public String getFirstName() {
         return firstName;
@@ -59,5 +61,6 @@ public class CustomerInformation {
     public void setAddress(String address) {
         this.address = address;
     }
+
 
 }

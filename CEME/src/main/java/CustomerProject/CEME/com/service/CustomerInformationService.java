@@ -1,7 +1,9 @@
 package CustomerProject.CEME.com.service;
 
 import java.util.Collection;
+import java.util.Optional;
 
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +18,11 @@ public class CustomerInformationService {
     //Get List of Customer
     public Collection<CustomerInformation> getAllCustomer() {
         return custRepo.findAll();
+    }
+
+    //Get a list of customer by ID
+    public Optional<CustomerInformation> getCustomerWithID(String id){
+        return custRepo.findById(id);
     }
 
     //Add new Customer

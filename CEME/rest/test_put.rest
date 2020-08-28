@@ -1,0 +1,10 @@
+PUT http://localhost:8080/api/customers/5f4817d4f79e2f154e4dafc8
+content-type: application/json
+
+{
+    "id": "5f4817d4f79e2f154e4dafc8",
+    "firstName": "TEST UPDATED",
+    "lastName": "TEST UPDATED",
+    "phoneNumber": "PHONE",
+    "address":" ADDRESS"
+}

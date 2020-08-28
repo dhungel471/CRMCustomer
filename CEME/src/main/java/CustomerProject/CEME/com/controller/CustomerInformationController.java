@@ -1,7 +1,9 @@
 package CustomerProject.CEME.com.controller;
 
 import java.util.Collection;
+import java.util.Optional;
 
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,6 +25,11 @@ public class CustomerInformationController {
     @RequestMapping(method = RequestMethod.GET)
     public Collection<CustomerInformation> getAllCustomer() {
         return cemeCustomerService.getAllCustomer();
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value="/{id}")
+    public Optional<CustomerInformation> getCustomerWithID( @PathVariable("id") String id) {
+        return cemeCustomerService.getCustomerWithID(id);
     }
 
   @RequestMapping(method=RequestMethod.POST)
