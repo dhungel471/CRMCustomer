@@ -1,9 +1,9 @@
-package CustomerProject.CEME.com.model;
+package com.allstate.ceme.crm.model;
 
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 
-public class CustomerInformation {
+public class Customer {
     @Id
     private String id;
     private String firstName;
@@ -11,9 +11,9 @@ public class CustomerInformation {
     private String phoneNumber;
     private String address;
 
-    public CustomerInformation() {
+    public Customer() {
     }
-    public CustomerInformation(String id, String firstName, String lastName, String phoneNumber, String address) {
+    public Customer(String id, String firstName, String lastName, String phoneNumber, String address) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
