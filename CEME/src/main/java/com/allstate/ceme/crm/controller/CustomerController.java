@@ -38,7 +38,7 @@ public class CustomerController {
   }
 
   @RequestMapping(method=RequestMethod.PUT, value="/{id}")
-  public ResponseEntity updateCustomer(@RequestBody Customer customer, @PathVariable("id") String id) {
+  public ResponseEntity<Customer> updateCustomer(@RequestBody Customer customer, @PathVariable("id") String id) {
     return ResponseEntity.ok(cemeCustomerService.updateCustomer(id, customer));
   }
   @CrossOrigin
