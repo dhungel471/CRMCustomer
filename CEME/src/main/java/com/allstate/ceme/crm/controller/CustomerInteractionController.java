@@ -24,4 +24,14 @@ public class CustomerInteractionController {
         customerInteractionService.addNewCustomerInteraction(customerInteraction);
     }
 
+    @RequestMapping(method=RequestMethod.PUT, value="/api/customers/interactions/{id}")
+    public ResponseEntity<CustomerInteraction> updateCustomer(@RequestBody CustomerInteraction customerInteraction, @PathVariable("id") String id) {
+        return ResponseEntity.ok(customerInteractionService.updateCustomerInteraction(id, customerInteraction));
+    }
+
+    @RequestMapping(method=RequestMethod.DELETE, value="/api/customers/interactions/{id}")
+    public void deleteCustomer(@PathVariable("id") String id){
+        customerInteractionService.deleteCustomerInteraction(id);
+    }
+
 }

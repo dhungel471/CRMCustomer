@@ -23,4 +23,12 @@ public class CustomerInteractionService {
     public void addNewCustomerInteraction(CustomerInteraction customerInteraction) {
         customerInteractionRepository.save(customerInteraction);
     }
+
+    public CustomerInteraction updateCustomerInteraction(String id, CustomerInteraction customerInteraction) {
+        return customerInteractionRepository.save(customerInteraction);
+    }
+
+    public void deleteCustomerInteraction(String id) {
+        customerInteractionRepository.deleteById(id);
+    }
 }
