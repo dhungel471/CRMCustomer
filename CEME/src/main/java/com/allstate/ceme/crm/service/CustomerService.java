@@ -15,7 +15,7 @@ public class CustomerService {
 
     //Get List of Customer
     public Collection<Customer> getAllCustomer() {
-        return custRepo.findAll();
+        return custRepo.findByOrderByLastNameAsc();
     }
 
     //Get a list of customer by ID
