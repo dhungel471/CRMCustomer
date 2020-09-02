@@ -9,7 +9,9 @@ pipeline {
             }
         }
         stage('Delivery') {
-            
+            steps {
+                echo 'mock delivery'
+            }
         }
         
     }
