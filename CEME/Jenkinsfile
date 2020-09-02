@@ -5,12 +5,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'gradle clean build'
+                dir ("CEME"){
+                     sh 'gradle clean build'
+                }
             }
         }
         stage('Delivery') {
             steps {
-                echo 'mock delivery'
+                 echo 'mock delivery'
             }
         }
         
