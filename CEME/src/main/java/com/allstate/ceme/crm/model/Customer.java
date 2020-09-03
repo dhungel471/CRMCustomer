@@ -1,6 +1,7 @@
 package com.allstate.ceme.crm.model;
 
-import org.bson.types.ObjectId;
+import java.util.Objects;
+
 import org.springframework.data.annotation.Id;
 
 public class Customer {
@@ -13,6 +14,7 @@ public class Customer {
 
     public Customer() {
     }
+
     public Customer(String id, String firstName, String lastName, String phoneNumber, String address) {
         this.id = id;
         this.firstName = firstName;
@@ -60,6 +62,24 @@ public class Customer {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Customer customer = (Customer) o;
+        return Objects.equals(id, customer.id) &&
+                Objects.equals(firstName, customer.firstName) &&
+                Objects.equals(lastName, customer.lastName) &&
+                Objects.equals(phoneNumber, customer.phoneNumber) &&
+                Objects.equals(address, customer.address);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, firstName, lastName, phoneNumber, address);
     }
 
     @Override
