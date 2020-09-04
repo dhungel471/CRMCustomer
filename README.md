@@ -22,3 +22,6 @@
 - Spring Boot 2 (with Spring Web MVC, Spring Data MongoDB)
 - MongoDB
 - Gradle
+
+## Jenkins
+- https://github.com/dhungel471/CRMCustomer/blob/master/CEME/Jenkinsfile
